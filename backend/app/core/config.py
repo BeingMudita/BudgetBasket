@@ -19,7 +19,8 @@ class Settings(BaseSettings):
 
     REDIS_HOST: str
     REDIS_PORT: int
-
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
+    ALGORITHM: str
     class Config:
         env_file = ".env"
 

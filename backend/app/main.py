@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from app.core.config import settings
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes.test_db import router as test_db_router
+from app.api.routes.auth import router as auth_router
+from app.api.routes.user import router as users_router
 
 origins = [
     "http://localhost:3000",
@@ -14,6 +16,9 @@ app = FastAPI(
 )
 
 app.include_router(test_db_router)
+app.include_router(auth_router)
+app.include_router(users_router)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
