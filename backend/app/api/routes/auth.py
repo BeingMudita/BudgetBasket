@@ -19,8 +19,10 @@ from app.schemas.user import (
     UserResponse,
 )
 
-router = APIRouter(prefix="/auth", tags=["Auth"])
-
+router = APIRouter(
+    prefix="/api/v1/auth",
+    tags=["Auth"],
+)
 
 @router.post(
     "/signup",
@@ -52,7 +54,14 @@ async def signup(
     await db.commit()
     await db.refresh(new_user)
 
-    return new_user
+    return {
+        "success": True,
+        "message": "User created successfully",
+        "data": {
+            "id": new_user.id,
+            "email": new_user.email,
+        },
+    }
 
 @router.post(
     "/login",
@@ -95,4 +104,5 @@ async def login(
     return {
         "access_token": access_token,
         "token_type": "bearer",
+        
     }

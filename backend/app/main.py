@@ -4,6 +4,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes.test_db import router as test_db_router
 from app.api.routes.auth import router as auth_router
 from app.api.routes.user import router as users_router
+from fastapi.exceptions import RequestValidationError
+from app.core.exceptions import (
+    generic_exception_handler,
+    validation_exception_handler,
+)
+from app.core.middleware import request_middleware
+from app.api.routes.health import router as health_router
 
 origins = [
     "http://localhost:3000",
@@ -15,9 +22,21 @@ app = FastAPI(
     version="1.0.0"
 )
 
+app.middleware("http")(request_middleware)
 app.include_router(test_db_router)
 app.include_router(auth_router)
 app.include_router(users_router)
+app.include_router(health_router)
+
+app.add_exception_handler(
+    RequestValidationError,
+    validation_exception_handler,
+)
+
+app.add_exception_handler(
+    Exception,
+    generic_exception_handler,
+)
 
 app.add_middleware(
     CORSMiddleware,
