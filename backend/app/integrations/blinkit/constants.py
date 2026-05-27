@@ -1,0 +1,1 @@
+BLINKIT_BASE_URL = "https://blinkit.com"

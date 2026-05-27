@@ -12,6 +12,9 @@ from app.core.exceptions import (
 from app.core.middleware import request_middleware
 from app.api.routes.health import router as health_router
 from app.api.routes.products import router as products_router
+from app.api.routes.integrations import (
+    router as integrations_router,
+)
 
 origins = [
     "http://localhost:3000",
@@ -29,6 +32,7 @@ app.include_router(auth_router)
 app.include_router(users_router)
 app.include_router(health_router)
 app.include_router(products_router)
+app.include_router(integrations_router)
 
 app.add_exception_handler(
     RequestValidationError,
