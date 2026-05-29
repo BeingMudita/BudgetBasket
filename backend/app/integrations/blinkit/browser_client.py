@@ -23,50 +23,65 @@ class BlinkitBrowserClient:
                 "/v1/layout/search" in response.url
                 and response.status == 200
             ):
+                print("\nFOUND SEARCH RESPONSE")
+                print(response.url)
+
                 try:
                     captured_response = await response.json()
-                except Exception:
-                    pass
+                    print("RESPONSE CAPTURED")
+                except Exception as e:
+                    print("JSON ERROR:", e)
 
         page.on("response", handle_response)
+
         async def handle_request(request):
             if "layout/search" in request.url:
-                print("FOUND SEARCH REQUEST")
-                print(request.method)
-                print(request.url)
-                print(request.headers)
+                print("\nFOUND SEARCH REQUEST")
+                print("METHOD:", request.method)
+                print("URL:", request.url)
 
         page.on("request", handle_request)
 
-        page.on(
-            "request",
-            lambda req: print(
-                req.method,
-                req.url
-            )
-        )
         await page.goto(
             "https://blinkit.com",
             wait_until="networkidle",
         )
 
-        # WAIT FOR LOCATION MODAL
+        print("\nPAGE LOADED")
+        print("URL:", page.url)
+
         await page.wait_for_timeout(3000)
+
+        # ----------------------------
+        # LOCATION INPUT
+        # ----------------------------
 
         inputs = await page.locator("input").all()
 
-        print(f"TOTAL INPUTS: {len(inputs)}")
+        print(f"\nTOTAL INPUTS: {len(inputs)}")
 
         for i, inp in enumerate(inputs):
             try:
-                placeholder = await inp.get_attribute("placeholder")
+                placeholder = await inp.get_attribute(
+                    "placeholder"
+                )
+
                 print(i, placeholder)
+
             except Exception:
                 pass
 
-        location_input = inputs[0]  # Assuming the first input is the location input
+        if len(inputs) == 0:
+            raise Exception(
+                "No input found for location"
+            )
+
+        location_input = inputs[0]
+
+        print("\nSETTING LOCATION")
 
         await location_input.fill(location)
+
         await page.wait_for_timeout(3000)
 
         await page.keyboard.press("ArrowDown")
@@ -75,51 +90,96 @@ class BlinkitBrowserClient:
 
         await page.keyboard.press("Enter")
 
-        await page.wait_for_timeout(3000)
+        print("\nLOCATION SELECTED")
 
-        await page.wait_for_timeout(5000)
+        await page.wait_for_timeout(8000)
 
-        all_divs = await page.locator("div").all()
+        print("\nCURRENT URL:")
+        print(page.url)
 
-        print(f"TOTAL DIVS: {len(all_divs)}")
+        # ----------------------------
+        # FIND EVERYTHING CONTAINING
+        # SEARCH TEXT
+        # ----------------------------
 
-        for i, div in enumerate(all_divs[:50]):
+        print("\nLOOKING FOR SEARCH ELEMENTS")
+
+        all_elements = await page.locator("*").all()
+
+        print(
+            f"TOTAL ELEMENTS: {len(all_elements)}"
+        )
+
+        search_candidates = []
+
+        for i, el in enumerate(all_elements[:2000]):
             try:
-                text = await div.inner_text()
+                text = (
+                    await el.inner_text()
+                ).strip()
 
-                if text.strip():
-                    print(i, text[:100])
+                if (
+                    "Search" in text
+                    or "search" in text
+                ):
+                    print(
+                        f"\nMATCH {len(search_candidates)}"
+                    )
+
+                    print("INDEX:", i)
+                    print("TEXT:", text[:200])
+
+                    search_candidates.append(el)
 
             except Exception:
                 pass
 
-        await page.wait_for_timeout(5000)
-
-        # SEARCH INPUT
-        locators = await page.locator("*").all()
-
-        for i, el in enumerate(locators[:500]):
-            try:
-                text = await el.inner_text()
-
-                if "Search" in text:
-                    print(i, text)
-
-            except:
-                pass
-
-        await search_input.click()
-
-        await search_input.press_sequentially(query)
-
-        await page.keyboard.press("Enter")
-
-        await page.wait_for_timeout(5000)
-        print(page.url)
-        await page.screenshot(
-            path="blinkit_search_result.png"
+        print(
+            f"\nFOUND {len(search_candidates)} SEARCH CANDIDATES"
         )
 
-        # await self.browser_manager.stop()
+        # ----------------------------
+        # CLICK FIRST SEARCH CANDIDATE
+        # ----------------------------
 
-        return captured_response
+        if len(search_candidates) > 0:
+
+            print(
+                "\nCLICKING FIRST SEARCH CANDIDATE"
+            )
+
+            try:
+                await search_candidates[0].click()
+
+                await page.wait_for_timeout(
+                    3000
+                )
+
+                print(
+                    "AFTER CLICK URL:",
+                    page.url
+                )
+
+            except Exception as e:
+                print(
+                    "CLICK FAILED:",
+                    str(e)
+                )
+
+        # ----------------------------
+        # DEBUG SCREENSHOT
+        # ----------------------------
+
+        await page.screenshot(
+            path="blinkit_debug.png",
+            full_page=True
+        )
+
+        print(
+            "\nSCREENSHOT SAVED: blinkit_debug.png"
+        )
+
+        return {
+            "status": "debug_complete",
+            "captured_response": captured_response
+        }
