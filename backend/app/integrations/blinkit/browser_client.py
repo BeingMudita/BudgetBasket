@@ -29,7 +29,22 @@ class BlinkitBrowserClient:
                     pass
 
         page.on("response", handle_response)
+        async def handle_request(request):
+            if "layout/search" in request.url:
+                print("FOUND SEARCH REQUEST")
+                print(request.method)
+                print(request.url)
+                print(request.headers)
 
+        page.on("request", handle_request)
+
+        page.on(
+            "request",
+            lambda req: print(
+                req.method,
+                req.url
+            )
+        )
         await page.goto(
             "https://blinkit.com",
             wait_until="networkidle",
@@ -81,9 +96,17 @@ class BlinkitBrowserClient:
         await page.wait_for_timeout(5000)
 
         # SEARCH INPUT
-        search_input = page.locator(
-            'input[placeholder*="Search"]'
-        ).first
+        locators = await page.locator("*").all()
+
+        for i, el in enumerate(locators[:500]):
+            try:
+                text = await el.inner_text()
+
+                if "Search" in text:
+                    print(i, text)
+
+            except:
+                pass
 
         await search_input.click()
 
