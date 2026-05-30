@@ -8,13 +8,16 @@ class BlinkitBrowserClient:
     async def search_products(
         self,
         query: str,
-        location: str = "gurgaon",
     ):
         await self.browser_manager.start()
 
         page = await self.browser_manager.new_page()
 
         captured_response = None
+
+        # ----------------------------------
+        # CAPTURE SEARCH RESPONSES
+        # ----------------------------------
 
         async def handle_response(response):
             nonlocal captured_response
@@ -23,163 +26,100 @@ class BlinkitBrowserClient:
                 "/v1/layout/search" in response.url
                 and response.status == 200
             ):
-                print("\nFOUND SEARCH RESPONSE")
+                print("\n========================")
+                print("FOUND SEARCH RESPONSE")
+                print("========================")
                 print(response.url)
 
                 try:
                     captured_response = await response.json()
+
+                    print("\n========================")
                     print("RESPONSE CAPTURED")
+                    print("========================")
+
+                    print(type(captured_response))
+
+                    if isinstance(captured_response, dict):
+                        print(captured_response.keys())
+
+                        import json
+
+                        with open(
+                            "blinkit_response.json",
+                            "w",
+                            encoding="utf-8"
+                        ) as f:
+                            json.dump(
+                                captured_response,
+                                f,
+                                indent=2
+                            )
+
+                        print(
+                            "JSON SAVED -> blinkit_response.json"
+                        )
                 except Exception as e:
                     print("JSON ERROR:", e)
 
         page.on("response", handle_response)
 
+        # ----------------------------------
+        # CAPTURE SEARCH REQUESTS
+        # ----------------------------------
+
         async def handle_request(request):
-            if "layout/search" in request.url:
-                print("\nFOUND SEARCH REQUEST")
+            if "/v1/layout/search" in request.url:
+                print("\n========================")
+                print("FOUND SEARCH REQUEST")
+                print("========================")
                 print("METHOD:", request.method)
                 print("URL:", request.url)
 
+                try:
+                    print("HEADERS:")
+                    print(request.headers)
+                except Exception:
+                    pass
+
         page.on("request", handle_request)
 
+        # ----------------------------------
+        # OPEN SEARCH PAGE DIRECTLY
+        # ----------------------------------
+
+        print("\nOPENING SEARCH PAGE")
+
         await page.goto(
-            "https://blinkit.com",
+            f"https://blinkit.com/s/?q={query}",
             wait_until="networkidle",
         )
 
-        print("\nPAGE LOADED")
+        print("\nSEARCH PAGE LOADED")
         print("URL:", page.url)
 
-        await page.wait_for_timeout(3000)
+        # Give Blinkit enough time
+        await page.wait_for_timeout(15000)
 
-        # ----------------------------
-        # LOCATION INPUT
-        # ----------------------------
-
-        inputs = await page.locator("input").all()
-
-        print(f"\nTOTAL INPUTS: {len(inputs)}")
-
-        for i, inp in enumerate(inputs):
-            try:
-                placeholder = await inp.get_attribute(
-                    "placeholder"
-                )
-
-                print(i, placeholder)
-
-            except Exception:
-                pass
-
-        if len(inputs) == 0:
-            raise Exception(
-                "No input found for location"
-            )
-
-        location_input = inputs[0]
-
-        print("\nSETTING LOCATION")
-
-        await location_input.fill(location)
-
-        await page.wait_for_timeout(3000)
-
-        await page.keyboard.press("ArrowDown")
-
-        await page.wait_for_timeout(1000)
-
-        await page.keyboard.press("Enter")
-
-        print("\nLOCATION SELECTED")
-
-        await page.wait_for_timeout(8000)
-
-        print("\nCURRENT URL:")
-        print(page.url)
-
-        # ----------------------------
-        # FIND EVERYTHING CONTAINING
-        # SEARCH TEXT
-        # ----------------------------
-
-        print("\nLOOKING FOR SEARCH ELEMENTS")
-
-        all_elements = await page.locator("*").all()
-
-        print(
-            f"TOTAL ELEMENTS: {len(all_elements)}"
-        )
-
-        search_candidates = []
-
-        for i, el in enumerate(all_elements[:2000]):
-            try:
-                text = (
-                    await el.inner_text()
-                ).strip()
-
-                if (
-                    "Search" in text
-                    or "search" in text
-                ):
-                    print(
-                        f"\nMATCH {len(search_candidates)}"
-                    )
-
-                    print("INDEX:", i)
-                    print("TEXT:", text[:200])
-
-                    search_candidates.append(el)
-
-            except Exception:
-                pass
-
-        print(
-            f"\nFOUND {len(search_candidates)} SEARCH CANDIDATES"
-        )
-
-        # ----------------------------
-        # CLICK FIRST SEARCH CANDIDATE
-        # ----------------------------
-
-        if len(search_candidates) > 0:
-
-            print(
-                "\nCLICKING FIRST SEARCH CANDIDATE"
-            )
-
-            try:
-                await search_candidates[0].click()
-
-                await page.wait_for_timeout(
-                    3000
-                )
-
-                print(
-                    "AFTER CLICK URL:",
-                    page.url
-                )
-
-            except Exception as e:
-                print(
-                    "CLICK FAILED:",
-                    str(e)
-                )
-
-        # ----------------------------
-        # DEBUG SCREENSHOT
-        # ----------------------------
+        # ----------------------------------
+        # SCREENSHOT
+        # ----------------------------------
 
         await page.screenshot(
-            path="blinkit_debug.png",
-            full_page=True
+            path="blinkit_search_result.png",
+            full_page=True,
         )
 
         print(
-            "\nSCREENSHOT SAVED: blinkit_debug.png"
+            "\nSCREENSHOT SAVED: blinkit_search_result.png"
         )
 
+        # ----------------------------------
+        # RETURN
+        # ----------------------------------
+
         return {
-            "status": "debug_complete",
-            "captured_response": captured_response
+            "success": True,
+            "query": query,
+            "captured_response": captured_response,
         }
