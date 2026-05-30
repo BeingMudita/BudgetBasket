@@ -605,7 +605,7 @@
             "ptype": "Cow Milk",
             "quantity": 1,
             "rating": "3.510000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+            "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
             "state": "available",
             "type_id": 23199,
             "widget_position": 1,
@@ -1389,7 +1389,7 @@
                   "ptype": "Milk",
                   "quantity": 1,
                   "rating": "4.690000",
-                  "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk,qtp_products_injected",
+                  "reason": "keyterm|match|milk,level1_category|match|milk,qtp_products_injected,text_match,within_category",
                   "state": "available",
                   "type_id": 3768,
                   "widget_position": 2,
@@ -2021,7 +2021,7 @@
                   "ptype": "Milk",
                   "quantity": 1,
                   "rating": "4.690000",
-                  "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk,qtp_products_injected",
+                  "reason": "keyterm|match|milk,level1_category|match|milk,qtp_products_injected,text_match,within_category",
                   "state": "available",
                   "type_id": 3768,
                   "widget_position": 2,
@@ -2507,7 +2507,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.690000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk,qtp_products_injected",
+            "reason": "keyterm|match|milk,level1_category|match|milk,qtp_products_injected,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 2,
@@ -3086,7 +3086,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.500000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk,qtp_products_injected",
+            "reason": "keyterm|match|milk,level1_category|match|milk,qtp_products_injected,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 3,
@@ -3695,7 +3695,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.660000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+            "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 4,
@@ -4493,7 +4493,7 @@
                   "ptype": "Milk",
                   "quantity": 1,
                   "rating": "4.470000",
-                  "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+                  "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
                   "state": "available",
                   "type_id": 3768,
                   "widget_position": 5,
@@ -5150,7 +5150,7 @@
                   "ptype": "Milk",
                   "quantity": 1,
                   "rating": "4.470000",
-                  "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+                  "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
                   "state": "available",
                   "type_id": 3768,
                   "widget_position": 5,
@@ -5767,7 +5767,7 @@
                   "ptype": "Milk",
                   "quantity": 1,
                   "rating": "4.470000",
-                  "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+                  "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
                   "state": "available",
                   "type_id": 3768,
                   "widget_position": 5,
@@ -6243,7 +6243,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.470000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+            "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 5,
@@ -7041,7 +7041,7 @@
                   "ptype": "Milk",
                   "quantity": 1,
                   "rating": "4.490000",
-                  "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+                  "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
                   "state": "available",
                   "type_id": 3768,
                   "widget_position": 6,
@@ -7688,7 +7688,7 @@
                   "ptype": "Milk",
                   "quantity": 1,
                   "rating": "4.490000",
-                  "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+                  "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
                   "state": "available",
                   "type_id": 3768,
                   "widget_position": 6,
@@ -8164,7 +8164,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.490000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+            "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 6,
@@ -8793,7 +8793,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.590000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+            "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 7,
@@ -9402,7 +9402,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.550000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk,qtp_products_injected",
+            "reason": "keyterm|match|milk,level1_category|match|milk,qtp_products_injected,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 8,
@@ -10011,7 +10011,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.510000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk,qtp_products_injected",
+            "reason": "keyterm|match|milk,level1_category|match|milk,qtp_products_injected,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 9,
@@ -10201,628 +10201,6 @@
           "animation_type": "SCALE_EFFECT",
           "group_id": 2881091,
           "variant_list": [
-            {
-              "data": {
-                "identity": {
-                  "id": "547190"
-                },
-                "section_count": 2,
-                "layout_type": "grid",
-                "bg_color": {
-                  "type": "indigo",
-                  "tint": "050"
-                },
-                "click_action": {
-                  "blinkit_deeplink": {
-                    "url": "grofers://pdp?product_id=547190&merchant_id=31719&previous_page=search&npr_flag=PRODUCT_RECOMMENDATION&product_index=21"
-                  },
-                  "type": "blinkit_deeplink"
-                },
-                "image": {
-                  "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png"
-                },
-                "name": {
-                  "text": "Amul Calci+ Calcium Rich High Protein Milk",
-                  "color": {
-                    "type": "black",
-                    "tint": "900"
-                  },
-                  "font": {
-                    "size": "300",
-                    "weight": "semibold"
-                  }
-                },
-                "variant": {
-                  "text": "1 ltr",
-                  "color": {
-                    "type": "green",
-                    "tint": "700"
-                  },
-                  "font": {
-                    "size": "200",
-                    "weight": "medium"
-                  },
-                  "number_of_lines": 1,
-                  "suffix_icon": {
-                    "color": {
-                      "type": "green",
-                      "tint": "700"
-                    },
-                    "font_size": "600"
-                  }
-                },
-                "show_variant_dropdown": true,
-                "normal_price": {
-                  "text": "\u20b998",
-                  "color": {
-                    "type": "black",
-                    "tint": "900"
-                  },
-                  "font": {
-                    "size": "200",
-                    "weight": "semibold"
-                  }
-                },
-                "inventory": 5,
-                "merchant_type": "express",
-                "eta_identifier": "express",
-                "stepper_data": {
-                  "size": "small",
-                  "state": {
-                    "title": {
-                      "text": "enabled"
-                    }
-                  }
-                },
-                "eta_tag": {
-                  "title": {
-                    "text": "earliest",
-                    "font": {
-                      "size": "050",
-                      "weight": "bold"
-                    }
-                  },
-                  "image": {
-                    "url": "http://cdn.grofers.com/assets/eta-icons/15-mins.png"
-                  }
-                },
-                "elevation": 0,
-                "corner_radius": 8,
-                "show_border": true,
-                "show_click_action_animation": true,
-                "cta": {
-                  "style": "atc_default",
-                  "count_type": "default"
-                },
-                "atc_action": {
-                  "add_to_cart": {
-                    "cart_item": {
-                      "product_id": 547190,
-                      "merchant_id": 31719,
-                      "product_name": "Amul Calci+ Calcium Rich High Protein Milk",
-                      "quantity": 1,
-                      "unavailable_quantity": 0,
-                      "price": 98,
-                      "mrp": 98,
-                      "unit": "1 ltr",
-                      "inventory": 5,
-                      "meta": null,
-                      "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png",
-                      "group_id": 2881091,
-                      "merchant_type": "express",
-                      "eta_identifier": "express",
-                      "brand": "Amul",
-                      "display_name": "Amul Calci+ Calcium Rich High Protein Milk"
-                    }
-                  },
-                  "type": "add_to_cart"
-                },
-                "rfc_action": {
-                  "remove_from_cart": {
-                    "cart_item": {
-                      "product_id": 547190,
-                      "merchant_id": 31719,
-                      "product_name": "Amul Calci+ Calcium Rich High Protein Milk",
-                      "quantity": 1,
-                      "unavailable_quantity": 0,
-                      "price": 98,
-                      "mrp": 98,
-                      "unit": "1 ltr",
-                      "inventory": 5,
-                      "meta": null,
-                      "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png",
-                      "group_id": 2881091,
-                      "merchant_type": "express",
-                      "eta_identifier": "express",
-                      "brand": "Amul",
-                      "display_name": "Amul Calci+ Calcium Rich High Protein Milk"
-                    },
-                    "count_type": "default"
-                  },
-                  "type": "remove_from_cart"
-                },
-                "offer": null,
-                "meta": {
-                  "merchant_id": "31719",
-                  "product_id": "547190"
-                },
-                "is_sold_out": false,
-                "animation_type": "SCALE_EFFECT",
-                "group_id": 2881091,
-                "product_state": "available",
-                "merchant_id": "31719",
-                "stepper_data_v2": {
-                  "size": "small",
-                  "max_count": 5,
-                  "zero_layout_config": {
-                    "style": "outline"
-                  },
-                  "non_zero_layout_config": {
-                    "style": "fill"
-                  },
-                  "increment_actions": {
-                    "default": [
-                      {
-                        "add_to_cart": {
-                          "cart_item": {
-                            "product_id": 547190,
-                            "merchant_id": 31719,
-                            "product_name": "Amul Calci+ Calcium Rich High Protein Milk",
-                            "quantity": 1,
-                            "unavailable_quantity": 0,
-                            "price": 98,
-                            "mrp": 98,
-                            "unit": "1 ltr",
-                            "inventory": 5,
-                            "meta": null,
-                            "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png",
-                            "group_id": 2881091,
-                            "merchant_type": "express",
-                            "eta_identifier": "express",
-                            "brand": "Amul",
-                            "display_name": "Amul Calci+ Calcium Rich High Protein Milk"
-                          }
-                        },
-                        "type": "add_to_cart"
-                      }
-                    ],
-                    "count_map": {
-                      "0": [
-                        {
-                          "recommendation_action": {
-                            "snippet_id": {
-                              "id": "recommendation_rail_547190"
-                            },
-                            "actions": [
-                              {
-                                "interaction_id": "remove_recommendation_snippet_id",
-                                "max_trigger_count": 12,
-                                "remove_recommendation": {
-                                  "snippet_prefix_id_to_remove": "recommendation_rail_",
-                                  "triggered_by_snippet_id": "547190"
-                                },
-                                "type": "remove_recommendation"
-                              },
-                              {
-                                "add_recommendation": {
-                                  "snippets_to_add": [
-                                    {
-                                      "data": {
-                                        "items": null,
-                                        "bg_color_hex": "#FFFFFF",
-                                        "bg_color": {
-                                          "type": "white",
-                                          "tint": "900"
-                                        },
-                                        "identity": {
-                                          "id": "recommendation_rail_547190"
-                                        },
-                                        "container_layout_config": {
-                                          "corner_radius": 12,
-                                          "stroke_color": {
-                                            "type": "grey",
-                                            "tint": "200"
-                                          },
-                                          "stroke_width": 0.5
-                                        },
-                                        "layout_bg_color": "#F4F6FB",
-                                        "loading_overlay_data": {
-                                          "api_request_type": "DEFAULT",
-                                          "screen_type": "COMMON_WIDGETIZED",
-                                          "loading_error_state": "LOADING",
-                                          "loading_error_overlay_size_type": "NO_CHANGE",
-                                          "bg_color_data": {
-                                            "type": "indigo",
-                                            "tint": "050"
-                                          },
-                                          "shimmer_res_id": "recommendation_rail_shimmer_layout",
-                                          "corner_radius": 12
-                                        }
-                                      },
-                                      "tracking": {
-                                        "widget_meta": {
-                                          "widget_id": "547190",
-                                          "widget_name": "Recommendation Collections",
-                                          "widget_title": "People also bought",
-                                          "widget_tracking_id": ""
-                                        },
-                                        "impression_map": {
-                                          "event_name": "Super Kvi Widget Shown"
-                                        },
-                                        "click_map": {
-                                          "event_name": "Super Kvi Widget Clicked"
-                                        },
-                                        "entry_source_map": {
-                                          "entry_source_id": "547190",
-                                          "entry_source_name": "Recommendation Collections",
-                                          "entry_source_title": "People also bought",
-                                          "entry_source_tracking_id": ""
-                                        }
-                                      },
-                                      "widget_type": "grid_container_vr",
-                                      "layout_config": {
-                                        "bg_color": "#FFFFFF",
-                                        "spacing": "12,12,12,0"
-                                      }
-                                    }
-                                  ],
-                                  "snippet_id_to_attach": "547190",
-                                  "conflict_policy": {
-                                    "match_config": {}
-                                  },
-                                  "prefix_id": "recommendation_rail_"
-                                },
-                                "interaction_id": "add_recommendation_shimmer_id",
-                                "max_trigger_count": 12,
-                                "type": "add_recommendation"
-                              },
-                              {
-                                "fetch_api": {
-                                  "url": "v1/actions/product_recommendations/547190?page_type=search_listing_page",
-                                  "type": "POST",
-                                  "extra_params": {
-                                    "product_id": "547190",
-                                    "product_position": 22,
-                                    "recipe_keyterms": [],
-                                    "recommendation_type": "DEFAULT",
-                                    "send_cart_items": true
-                                  },
-                                  "failure_actions": [
-                                    {
-                                      "remove_recommendation": {
-                                        "snippet_prefix_id_to_remove": "recommendation_rail_"
-                                      },
-                                      "type": "remove_recommendation"
-                                    }
-                                  ]
-                                },
-                                "interaction_id": "fetch_recommendation_snippet_id",
-                                "max_trigger_count": 12,
-                                "type": "fetch_api"
-                              }
-                            ]
-                          },
-                          "type": "recommendation_action"
-                        }
-                      ]
-                    }
-                  },
-                  "decrement_actions": {
-                    "default": [
-                      {
-                        "remove_from_cart": {
-                          "cart_item": {
-                            "product_id": 547190,
-                            "merchant_id": 31719,
-                            "product_name": "Amul Calci+ Calcium Rich High Protein Milk",
-                            "quantity": 1,
-                            "unavailable_quantity": 0,
-                            "price": 98,
-                            "mrp": 98,
-                            "unit": "1 ltr",
-                            "inventory": 5,
-                            "meta": null,
-                            "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png",
-                            "group_id": 2881091,
-                            "merchant_type": "express",
-                            "eta_identifier": "express",
-                            "brand": "Amul",
-                            "display_name": "Amul Calci+ Calcium Rich High Protein Milk"
-                          },
-                          "count_type": "default"
-                        },
-                        "type": "remove_from_cart"
-                      }
-                    ]
-                  }
-                },
-                "brand_name": {
-                  "text": "Amul",
-                  "color": {
-                    "type": "grey",
-                    "tint": "600"
-                  },
-                  "font": {
-                    "size": "200",
-                    "weight": "regular"
-                  }
-                },
-                "media_container": {
-                  "items": [
-                    {
-                      "media_type": "image",
-                      "image": {
-                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png",
-                        "placeholder_color": {
-                          "type": "white",
-                          "tint": "900"
-                        }
-                      }
-                    },
-                    {
-                      "media_type": "image",
-                      "image": {
-                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-46.png",
-                        "placeholder_color": {
-                          "type": "white",
-                          "tint": "900"
-                        }
-                      }
-                    },
-                    {
-                      "media_type": "image",
-                      "image": {
-                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-47.png",
-                        "placeholder_color": {
-                          "type": "white",
-                          "tint": "900"
-                        }
-                      }
-                    },
-                    {
-                      "media_type": "image",
-                      "image": {
-                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-48.png",
-                        "placeholder_color": {
-                          "type": "white",
-                          "tint": "900"
-                        }
-                      }
-                    },
-                    {
-                      "media_type": "image",
-                      "image": {
-                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-49.png",
-                        "placeholder_color": {
-                          "type": "white",
-                          "tint": "900"
-                        }
-                      }
-                    },
-                    {
-                      "media_type": "image",
-                      "image": {
-                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-50.png",
-                        "placeholder_color": {
-                          "type": "white",
-                          "tint": "900"
-                        }
-                      }
-                    },
-                    {
-                      "media_type": "image",
-                      "image": {
-                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-51.png",
-                        "placeholder_color": {
-                          "type": "white",
-                          "tint": "900"
-                        }
-                      }
-                    },
-                    {
-                      "media_type": "image",
-                      "image": {
-                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-52.png",
-                        "placeholder_color": {
-                          "type": "white",
-                          "tint": "900"
-                        }
-                      }
-                    }
-                  ]
-                },
-                "rating": {
-                  "type": "bar",
-                  "bar": {
-                    "value": 4.449999809265137,
-                    "size": "medium",
-                    "title": {
-                      "text": "5,334",
-                      "color": {
-                        "type": "grey",
-                        "tint": "050"
-                      },
-                      "font": {
-                        "size": "100",
-                        "weight": "medium"
-                      },
-                      "is_markdown": 1
-                    },
-                    "border_color": {
-                      "type": "yellow",
-                      "tint": "400"
-                    },
-                    "star_color": {
-                      "type": "yellow",
-                      "tint": "400"
-                    },
-                    "star_unfilled_color": {
-                      "type": "white",
-                      "tint": "900"
-                    }
-                  }
-                },
-                "display_name": {
-                  "text": "Amul Calci+ Calcium Rich High Protein Milk",
-                  "color": {
-                    "type": "black",
-                    "tint": "900"
-                  },
-                  "font": {
-                    "size": "300",
-                    "weight": "semibold"
-                  }
-                },
-                "ui_config": {
-                  "default_rating_visibility": "invisible",
-                  "default_rating_config": {
-                    "type": "bar",
-                    "bar": {
-                      "size": "medium",
-                      "title": {
-                        "text": "Dummy",
-                        "color": {
-                          "type": "grey",
-                          "tint": "800"
-                        },
-                        "font": {
-                          "size": "100",
-                          "weight": "medium"
-                        }
-                      }
-                    }
-                  }
-                },
-                "product_id": "547190",
-                "product_badges": [
-                  {
-                    "type": "ETA",
-                    "label": "ETA",
-                    "text_data": {
-                      "text": "earliest",
-                      "color": {
-                        "type": "black",
-                        "tint": "900"
-                      },
-                      "font": {
-                        "size": "050",
-                        "weight": "bold"
-                      }
-                    },
-                    "bg_color_data": {
-                      "type": "grey",
-                      "tint": "100"
-                    },
-                    "image_data": {
-                      "url": "http://cdn.grofers.com/assets/eta-icons/15-mins.png"
-                    },
-                    "padding": "6,0,6,0"
-                  }
-                ]
-              },
-              "tracking": {
-                "widget_meta": {
-                  "widget_id": "547190",
-                  "widget_name": "Product",
-                  "widget_title": "Amul Calci+ Calcium Rich High Protein Milk"
-                },
-                "impression_map": {
-                  "badge": null,
-                  "eta_identifier": "express",
-                  "event_name": "Product Shown",
-                  "inventory": 5,
-                  "merchant_id": 31719,
-                  "merchant_type": "express",
-                  "mrp": 98,
-                  "overlay_badges": null,
-                  "price": 98,
-                  "ptype": null,
-                  "state": "available",
-                  "type_id": null
-                },
-                "click_map": {
-                  "badge": null,
-                  "brand": "Amul",
-                  "currency": "INR",
-                  "eta_identifier": "express",
-                  "event_name": "Product Clicked",
-                  "inventory": 5,
-                  "l0_category": "#-NA",
-                  "l1_category": "#-NA",
-                  "l2_category": "#-NA",
-                  "merchant_id": 31719,
-                  "merchant_type": "express",
-                  "mrp": 98,
-                  "name": "Amul Calci+ Calcium Rich High Protein Milk",
-                  "overlay_badges": null,
-                  "price": 98,
-                  "product_id": "547190",
-                  "ptype": null,
-                  "quantity": 1,
-                  "state": "available",
-                  "type_id": null
-                },
-                "entry_source_map": {
-                  "entry_source_id": "547190",
-                  "entry_source_name": "Product",
-                  "entry_source_title": "Amul Calci+ Calcium Rich High Protein Milk"
-                },
-                "common_attributes": {
-                  "badge": "",
-                  "brand": "Amul",
-                  "cta_type": "",
-                  "currency": "INR",
-                  "inventory": 5,
-                  "inventory_limit": null,
-                  "l0_category": "",
-                  "l1_category": "",
-                  "l2_category": "",
-                  "mrp": 98,
-                  "name": "Amul Calci+ Calcium Rich High Protein Milk",
-                  "price": 98,
-                  "product_id": "547190",
-                  "product_position": "22",
-                  "ptype": "Milk",
-                  "quantity": 1,
-                  "rating": "4.450000",
-                  "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
-                  "state": "available",
-                  "type_id": 3768,
-                  "widget_position": 10,
-                  "widget_variation_id": "global_search_results"
-                },
-                "interactions_map": {
-                  "ADD_TO_CART": {
-                    "event_name": "Product Added"
-                  },
-                  "BOTTOM_STRIP_BUTTON": {
-                    "event_name": "Info Strip Clicked"
-                  },
-                  "CUSTOM_CTA": {
-                    "event_name": "Buy Now Clicked"
-                  },
-                  "DISABLED_ADD_TO_CART": {
-                    "event_name": "Insufficient Inventory Atc Clicked"
-                  },
-                  "NOTIFY_ME": {
-                    "event_name": "Notify Me Clicked"
-                  },
-                  "PRODUCT_FAVORITE_ICON": {
-                    "event_name": "Product Favourite Icon Clicked"
-                  },
-                  "PROMO_OFFER_TEXT": {
-                    "event_name": "PROMO_OFFER_TAG_CLICKED"
-                  },
-                  "REMOVE_FROM_CART": {
-                    "event_name": "Product Removed"
-                  },
-                  "SAVE_CTA": {
-                    "event_name": "PRODUCT_SAVE_CLICKED"
-                  }
-                }
-              },
-              "widget_type": "product_card_snippet_type_2"
-            },
             {
               "data": {
                 "identity": {
@@ -11407,7 +10785,629 @@
                   "ptype": "Milk",
                   "quantity": 1,
                   "rating": "4.450000",
-                  "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+                  "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
+                  "state": "available",
+                  "type_id": 3768,
+                  "widget_position": 10,
+                  "widget_variation_id": "global_search_results"
+                },
+                "interactions_map": {
+                  "ADD_TO_CART": {
+                    "event_name": "Product Added"
+                  },
+                  "BOTTOM_STRIP_BUTTON": {
+                    "event_name": "Info Strip Clicked"
+                  },
+                  "CUSTOM_CTA": {
+                    "event_name": "Buy Now Clicked"
+                  },
+                  "DISABLED_ADD_TO_CART": {
+                    "event_name": "Insufficient Inventory Atc Clicked"
+                  },
+                  "NOTIFY_ME": {
+                    "event_name": "Notify Me Clicked"
+                  },
+                  "PRODUCT_FAVORITE_ICON": {
+                    "event_name": "Product Favourite Icon Clicked"
+                  },
+                  "PROMO_OFFER_TEXT": {
+                    "event_name": "PROMO_OFFER_TAG_CLICKED"
+                  },
+                  "REMOVE_FROM_CART": {
+                    "event_name": "Product Removed"
+                  },
+                  "SAVE_CTA": {
+                    "event_name": "PRODUCT_SAVE_CLICKED"
+                  }
+                }
+              },
+              "widget_type": "product_card_snippet_type_2"
+            },
+            {
+              "data": {
+                "identity": {
+                  "id": "547190"
+                },
+                "section_count": 2,
+                "layout_type": "grid",
+                "bg_color": {
+                  "type": "indigo",
+                  "tint": "050"
+                },
+                "click_action": {
+                  "blinkit_deeplink": {
+                    "url": "grofers://pdp?product_id=547190&merchant_id=31719&previous_page=search&npr_flag=PRODUCT_RECOMMENDATION&product_index=21"
+                  },
+                  "type": "blinkit_deeplink"
+                },
+                "image": {
+                  "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png"
+                },
+                "name": {
+                  "text": "Amul Calci+ Calcium Rich High Protein Milk",
+                  "color": {
+                    "type": "black",
+                    "tint": "900"
+                  },
+                  "font": {
+                    "size": "300",
+                    "weight": "semibold"
+                  }
+                },
+                "variant": {
+                  "text": "1 ltr",
+                  "color": {
+                    "type": "green",
+                    "tint": "700"
+                  },
+                  "font": {
+                    "size": "200",
+                    "weight": "medium"
+                  },
+                  "number_of_lines": 1,
+                  "suffix_icon": {
+                    "color": {
+                      "type": "green",
+                      "tint": "700"
+                    },
+                    "font_size": "600"
+                  }
+                },
+                "show_variant_dropdown": true,
+                "normal_price": {
+                  "text": "\u20b998",
+                  "color": {
+                    "type": "black",
+                    "tint": "900"
+                  },
+                  "font": {
+                    "size": "200",
+                    "weight": "semibold"
+                  }
+                },
+                "inventory": 5,
+                "merchant_type": "express",
+                "eta_identifier": "express",
+                "stepper_data": {
+                  "size": "small",
+                  "state": {
+                    "title": {
+                      "text": "enabled"
+                    }
+                  }
+                },
+                "eta_tag": {
+                  "title": {
+                    "text": "earliest",
+                    "font": {
+                      "size": "050",
+                      "weight": "bold"
+                    }
+                  },
+                  "image": {
+                    "url": "http://cdn.grofers.com/assets/eta-icons/15-mins.png"
+                  }
+                },
+                "elevation": 0,
+                "corner_radius": 8,
+                "show_border": true,
+                "show_click_action_animation": true,
+                "cta": {
+                  "style": "atc_default",
+                  "count_type": "default"
+                },
+                "atc_action": {
+                  "add_to_cart": {
+                    "cart_item": {
+                      "product_id": 547190,
+                      "merchant_id": 31719,
+                      "product_name": "Amul Calci+ Calcium Rich High Protein Milk",
+                      "quantity": 1,
+                      "unavailable_quantity": 0,
+                      "price": 98,
+                      "mrp": 98,
+                      "unit": "1 ltr",
+                      "inventory": 5,
+                      "meta": null,
+                      "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png",
+                      "group_id": 2881091,
+                      "merchant_type": "express",
+                      "eta_identifier": "express",
+                      "brand": "Amul",
+                      "display_name": "Amul Calci+ Calcium Rich High Protein Milk"
+                    }
+                  },
+                  "type": "add_to_cart"
+                },
+                "rfc_action": {
+                  "remove_from_cart": {
+                    "cart_item": {
+                      "product_id": 547190,
+                      "merchant_id": 31719,
+                      "product_name": "Amul Calci+ Calcium Rich High Protein Milk",
+                      "quantity": 1,
+                      "unavailable_quantity": 0,
+                      "price": 98,
+                      "mrp": 98,
+                      "unit": "1 ltr",
+                      "inventory": 5,
+                      "meta": null,
+                      "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png",
+                      "group_id": 2881091,
+                      "merchant_type": "express",
+                      "eta_identifier": "express",
+                      "brand": "Amul",
+                      "display_name": "Amul Calci+ Calcium Rich High Protein Milk"
+                    },
+                    "count_type": "default"
+                  },
+                  "type": "remove_from_cart"
+                },
+                "offer": null,
+                "meta": {
+                  "merchant_id": "31719",
+                  "product_id": "547190"
+                },
+                "is_sold_out": false,
+                "animation_type": "SCALE_EFFECT",
+                "group_id": 2881091,
+                "product_state": "available",
+                "merchant_id": "31719",
+                "stepper_data_v2": {
+                  "size": "small",
+                  "max_count": 5,
+                  "zero_layout_config": {
+                    "style": "outline"
+                  },
+                  "non_zero_layout_config": {
+                    "style": "fill"
+                  },
+                  "increment_actions": {
+                    "default": [
+                      {
+                        "add_to_cart": {
+                          "cart_item": {
+                            "product_id": 547190,
+                            "merchant_id": 31719,
+                            "product_name": "Amul Calci+ Calcium Rich High Protein Milk",
+                            "quantity": 1,
+                            "unavailable_quantity": 0,
+                            "price": 98,
+                            "mrp": 98,
+                            "unit": "1 ltr",
+                            "inventory": 5,
+                            "meta": null,
+                            "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png",
+                            "group_id": 2881091,
+                            "merchant_type": "express",
+                            "eta_identifier": "express",
+                            "brand": "Amul",
+                            "display_name": "Amul Calci+ Calcium Rich High Protein Milk"
+                          }
+                        },
+                        "type": "add_to_cart"
+                      }
+                    ],
+                    "count_map": {
+                      "0": [
+                        {
+                          "recommendation_action": {
+                            "snippet_id": {
+                              "id": "recommendation_rail_547190"
+                            },
+                            "actions": [
+                              {
+                                "interaction_id": "remove_recommendation_snippet_id",
+                                "max_trigger_count": 12,
+                                "remove_recommendation": {
+                                  "snippet_prefix_id_to_remove": "recommendation_rail_",
+                                  "triggered_by_snippet_id": "547190"
+                                },
+                                "type": "remove_recommendation"
+                              },
+                              {
+                                "add_recommendation": {
+                                  "snippets_to_add": [
+                                    {
+                                      "data": {
+                                        "items": null,
+                                        "bg_color_hex": "#FFFFFF",
+                                        "bg_color": {
+                                          "type": "white",
+                                          "tint": "900"
+                                        },
+                                        "identity": {
+                                          "id": "recommendation_rail_547190"
+                                        },
+                                        "container_layout_config": {
+                                          "corner_radius": 12,
+                                          "stroke_color": {
+                                            "type": "grey",
+                                            "tint": "200"
+                                          },
+                                          "stroke_width": 0.5
+                                        },
+                                        "layout_bg_color": "#F4F6FB",
+                                        "loading_overlay_data": {
+                                          "api_request_type": "DEFAULT",
+                                          "screen_type": "COMMON_WIDGETIZED",
+                                          "loading_error_state": "LOADING",
+                                          "loading_error_overlay_size_type": "NO_CHANGE",
+                                          "bg_color_data": {
+                                            "type": "indigo",
+                                            "tint": "050"
+                                          },
+                                          "shimmer_res_id": "recommendation_rail_shimmer_layout",
+                                          "corner_radius": 12
+                                        }
+                                      },
+                                      "tracking": {
+                                        "widget_meta": {
+                                          "widget_id": "547190",
+                                          "widget_name": "Recommendation Collections",
+                                          "widget_title": "People also bought",
+                                          "widget_tracking_id": ""
+                                        },
+                                        "impression_map": {
+                                          "event_name": "Super Kvi Widget Shown"
+                                        },
+                                        "click_map": {
+                                          "event_name": "Super Kvi Widget Clicked"
+                                        },
+                                        "entry_source_map": {
+                                          "entry_source_id": "547190",
+                                          "entry_source_name": "Recommendation Collections",
+                                          "entry_source_title": "People also bought",
+                                          "entry_source_tracking_id": ""
+                                        }
+                                      },
+                                      "widget_type": "grid_container_vr",
+                                      "layout_config": {
+                                        "bg_color": "#FFFFFF",
+                                        "spacing": "12,12,12,0"
+                                      }
+                                    }
+                                  ],
+                                  "snippet_id_to_attach": "547190",
+                                  "conflict_policy": {
+                                    "match_config": {}
+                                  },
+                                  "prefix_id": "recommendation_rail_"
+                                },
+                                "interaction_id": "add_recommendation_shimmer_id",
+                                "max_trigger_count": 12,
+                                "type": "add_recommendation"
+                              },
+                              {
+                                "fetch_api": {
+                                  "url": "v1/actions/product_recommendations/547190?page_type=search_listing_page",
+                                  "type": "POST",
+                                  "extra_params": {
+                                    "product_id": "547190",
+                                    "product_position": 22,
+                                    "recipe_keyterms": [],
+                                    "recommendation_type": "DEFAULT",
+                                    "send_cart_items": true
+                                  },
+                                  "failure_actions": [
+                                    {
+                                      "remove_recommendation": {
+                                        "snippet_prefix_id_to_remove": "recommendation_rail_"
+                                      },
+                                      "type": "remove_recommendation"
+                                    }
+                                  ]
+                                },
+                                "interaction_id": "fetch_recommendation_snippet_id",
+                                "max_trigger_count": 12,
+                                "type": "fetch_api"
+                              }
+                            ]
+                          },
+                          "type": "recommendation_action"
+                        }
+                      ]
+                    }
+                  },
+                  "decrement_actions": {
+                    "default": [
+                      {
+                        "remove_from_cart": {
+                          "cart_item": {
+                            "product_id": 547190,
+                            "merchant_id": 31719,
+                            "product_name": "Amul Calci+ Calcium Rich High Protein Milk",
+                            "quantity": 1,
+                            "unavailable_quantity": 0,
+                            "price": 98,
+                            "mrp": 98,
+                            "unit": "1 ltr",
+                            "inventory": 5,
+                            "meta": null,
+                            "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png",
+                            "group_id": 2881091,
+                            "merchant_type": "express",
+                            "eta_identifier": "express",
+                            "brand": "Amul",
+                            "display_name": "Amul Calci+ Calcium Rich High Protein Milk"
+                          },
+                          "count_type": "default"
+                        },
+                        "type": "remove_from_cart"
+                      }
+                    ]
+                  }
+                },
+                "brand_name": {
+                  "text": "Amul",
+                  "color": {
+                    "type": "grey",
+                    "tint": "600"
+                  },
+                  "font": {
+                    "size": "200",
+                    "weight": "regular"
+                  }
+                },
+                "media_container": {
+                  "items": [
+                    {
+                      "media_type": "image",
+                      "image": {
+                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-45.png",
+                        "placeholder_color": {
+                          "type": "white",
+                          "tint": "900"
+                        }
+                      }
+                    },
+                    {
+                      "media_type": "image",
+                      "image": {
+                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-46.png",
+                        "placeholder_color": {
+                          "type": "white",
+                          "tint": "900"
+                        }
+                      }
+                    },
+                    {
+                      "media_type": "image",
+                      "image": {
+                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-47.png",
+                        "placeholder_color": {
+                          "type": "white",
+                          "tint": "900"
+                        }
+                      }
+                    },
+                    {
+                      "media_type": "image",
+                      "image": {
+                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-48.png",
+                        "placeholder_color": {
+                          "type": "white",
+                          "tint": "900"
+                        }
+                      }
+                    },
+                    {
+                      "media_type": "image",
+                      "image": {
+                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-49.png",
+                        "placeholder_color": {
+                          "type": "white",
+                          "tint": "900"
+                        }
+                      }
+                    },
+                    {
+                      "media_type": "image",
+                      "image": {
+                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-50.png",
+                        "placeholder_color": {
+                          "type": "white",
+                          "tint": "900"
+                        }
+                      }
+                    },
+                    {
+                      "media_type": "image",
+                      "image": {
+                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-51.png",
+                        "placeholder_color": {
+                          "type": "white",
+                          "tint": "900"
+                        }
+                      }
+                    },
+                    {
+                      "media_type": "image",
+                      "image": {
+                        "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778241971296-52.png",
+                        "placeholder_color": {
+                          "type": "white",
+                          "tint": "900"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "rating": {
+                  "type": "bar",
+                  "bar": {
+                    "value": 4.449999809265137,
+                    "size": "medium",
+                    "title": {
+                      "text": "5,334",
+                      "color": {
+                        "type": "grey",
+                        "tint": "050"
+                      },
+                      "font": {
+                        "size": "100",
+                        "weight": "medium"
+                      },
+                      "is_markdown": 1
+                    },
+                    "border_color": {
+                      "type": "yellow",
+                      "tint": "400"
+                    },
+                    "star_color": {
+                      "type": "yellow",
+                      "tint": "400"
+                    },
+                    "star_unfilled_color": {
+                      "type": "white",
+                      "tint": "900"
+                    }
+                  }
+                },
+                "display_name": {
+                  "text": "Amul Calci+ Calcium Rich High Protein Milk",
+                  "color": {
+                    "type": "black",
+                    "tint": "900"
+                  },
+                  "font": {
+                    "size": "300",
+                    "weight": "semibold"
+                  }
+                },
+                "ui_config": {
+                  "default_rating_visibility": "invisible",
+                  "default_rating_config": {
+                    "type": "bar",
+                    "bar": {
+                      "size": "medium",
+                      "title": {
+                        "text": "Dummy",
+                        "color": {
+                          "type": "grey",
+                          "tint": "800"
+                        },
+                        "font": {
+                          "size": "100",
+                          "weight": "medium"
+                        }
+                      }
+                    }
+                  }
+                },
+                "product_id": "547190",
+                "product_badges": [
+                  {
+                    "type": "ETA",
+                    "label": "ETA",
+                    "text_data": {
+                      "text": "earliest",
+                      "color": {
+                        "type": "black",
+                        "tint": "900"
+                      },
+                      "font": {
+                        "size": "050",
+                        "weight": "bold"
+                      }
+                    },
+                    "bg_color_data": {
+                      "type": "grey",
+                      "tint": "100"
+                    },
+                    "image_data": {
+                      "url": "http://cdn.grofers.com/assets/eta-icons/15-mins.png"
+                    },
+                    "padding": "6,0,6,0"
+                  }
+                ]
+              },
+              "tracking": {
+                "widget_meta": {
+                  "widget_id": "547190",
+                  "widget_name": "Product",
+                  "widget_title": "Amul Calci+ Calcium Rich High Protein Milk"
+                },
+                "impression_map": {
+                  "badge": null,
+                  "eta_identifier": "express",
+                  "event_name": "Product Shown",
+                  "inventory": 5,
+                  "merchant_id": 31719,
+                  "merchant_type": "express",
+                  "mrp": 98,
+                  "overlay_badges": null,
+                  "price": 98,
+                  "ptype": null,
+                  "state": "available",
+                  "type_id": null
+                },
+                "click_map": {
+                  "badge": null,
+                  "brand": "Amul",
+                  "currency": "INR",
+                  "eta_identifier": "express",
+                  "event_name": "Product Clicked",
+                  "inventory": 5,
+                  "l0_category": "#-NA",
+                  "l1_category": "#-NA",
+                  "l2_category": "#-NA",
+                  "merchant_id": 31719,
+                  "merchant_type": "express",
+                  "mrp": 98,
+                  "name": "Amul Calci+ Calcium Rich High Protein Milk",
+                  "overlay_badges": null,
+                  "price": 98,
+                  "product_id": "547190",
+                  "ptype": null,
+                  "quantity": 1,
+                  "state": "available",
+                  "type_id": null
+                },
+                "entry_source_map": {
+                  "entry_source_id": "547190",
+                  "entry_source_name": "Product",
+                  "entry_source_title": "Amul Calci+ Calcium Rich High Protein Milk"
+                },
+                "common_attributes": {
+                  "badge": "",
+                  "brand": "Amul",
+                  "cta_type": "",
+                  "currency": "INR",
+                  "inventory": 5,
+                  "inventory_limit": null,
+                  "l0_category": "",
+                  "l1_category": "",
+                  "l2_category": "",
+                  "mrp": 98,
+                  "name": "Amul Calci+ Calcium Rich High Protein Milk",
+                  "price": 98,
+                  "product_id": "547190",
+                  "product_position": "22",
+                  "ptype": "Milk",
+                  "quantity": 1,
+                  "rating": "4.450000",
+                  "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
                   "state": "available",
                   "type_id": 3768,
                   "widget_position": 10,
@@ -11883,7 +11883,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.450000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+            "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 10,
@@ -12482,7 +12482,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.030000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+            "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 11,
@@ -13101,7 +13101,7 @@
             "ptype": "Milk",
             "quantity": 1,
             "rating": "4.620000",
-            "reason": "keyterm|match|milk,text_match,within_category,level1_category|match|milk",
+            "reason": "keyterm|match|milk,level1_category|match|milk,text_match,within_category",
             "state": "available",
             "type_id": 3768,
             "widget_position": 12,
@@ -13203,7 +13203,7 @@
       {
         "save_key_value": {
           "key": "session_context",
-          "value": "{\"searched_entities\":[{\"search_query\":\"milk\",\"entity\":{\"id\":1497,\"type\":\"keyterm\",\"name\":\"milk\"},\"last_searched_at\":1780155236}]}"
+          "value": "{\"searched_entities\":[{\"search_query\":\"milk\",\"entity\":{\"id\":1497,\"type\":\"keyterm\",\"name\":\"milk\"},\"last_searched_at\":1780155722}]}"
         },
         "type": "save_key_value"
       }

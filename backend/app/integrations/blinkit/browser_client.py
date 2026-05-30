@@ -118,8 +118,4 @@ class BlinkitBrowserClient:
         # RETURN
         # ----------------------------------
 
-        return {
-            "success": True,
-            "query": query,
-            "captured_response": captured_response,
-        }
+        return captured_response
