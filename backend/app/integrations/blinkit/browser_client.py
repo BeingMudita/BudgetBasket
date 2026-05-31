@@ -13,7 +13,7 @@ class BlinkitBrowserClient:
 
         page = await self.browser_manager.new_page()
 
-        captured_response = None
+        captured_response = []
 
         # ----------------------------------
         # CAPTURE SEARCH RESPONSES
@@ -32,7 +32,16 @@ class BlinkitBrowserClient:
                 print(response.url)
 
                 try:
-                    captured_response = await response.json()
+                    response_json = await response.json()
+
+                    captured_responses.append(
+                        response_json
+                    )
+
+                    print(
+                        f"TOTAL CAPTURED RESPONSES: "
+                        f"{len(captured_responses)}"
+                    )
 
                     print("\n========================")
                     print("RESPONSE CAPTURED")
@@ -100,6 +109,24 @@ class BlinkitBrowserClient:
 
         # Give Blinkit enough time
         await page.wait_for_timeout(15000)
+        print(
+            "\nSTARTING AUTO SCROLL"
+        )
+
+        for i in range(20):
+
+            await page.mouse.wheel(
+                0,
+                5000
+            )
+
+            await page.wait_for_timeout(
+                2000
+            )
+
+            print(
+                f"SCROLL {i + 1}"
+            )
 
         # ----------------------------------
         # SCREENSHOT
