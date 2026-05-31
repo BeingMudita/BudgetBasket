@@ -26,6 +26,10 @@ class BlinkitService:
         products = BlinkitParser.parse_products(
             response
         )
+        print(
+            f"\nFINAL PRODUCTS: "
+            f"{len(products)}"
+        )
 
         return {
             "success": True,

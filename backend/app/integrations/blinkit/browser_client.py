@@ -145,4 +145,59 @@ class BlinkitBrowserClient:
         # RETURN
         # ----------------------------------
 
-        return captured_response
+        all_snippets = []
+
+        for response in captured_responses:
+
+            response_data = response.get(
+                "response",
+                {}
+            )
+
+            snippets = response_data.get(
+                "snippets",
+                []
+            )
+
+            all_snippets.extend(
+                snippets
+            )
+
+        print(
+            f"\nTOTAL RAW SNIPPETS: "
+            f"{len(all_snippets)}"
+        )
+
+        unique_products = {}
+
+        for snippet in all_snippets:
+
+            product_id = (
+                snippet.get(
+                    "data",
+                    {}
+                ).get(
+                    "product_id"
+                )
+            )
+
+            if product_id:
+
+                unique_products[
+                    str(product_id)
+                ] = snippet
+
+        all_snippets = list(
+            unique_products.values()
+        )
+
+        print(
+            f"UNIQUE PRODUCTS: "
+            f"{len(all_snippets)}"
+        )
+
+        return {
+            "response": {
+                "snippets": all_snippets
+            }
+        }
