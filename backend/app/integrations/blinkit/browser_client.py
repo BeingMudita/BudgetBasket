@@ -13,14 +13,14 @@ class BlinkitBrowserClient:
 
         page = await self.browser_manager.new_page()
 
-        captured_response = []
+        captured_responses = []
 
         # ----------------------------------
         # CAPTURE SEARCH RESPONSES
         # ----------------------------------
 
         async def handle_response(response):
-            nonlocal captured_response
+            nonlocal captured_responses
 
             if (
                 "/v1/layout/search" in response.url
@@ -47,27 +47,11 @@ class BlinkitBrowserClient:
                     print("RESPONSE CAPTURED")
                     print("========================")
 
-                    print(type(captured_response))
 
-                    if isinstance(captured_response, dict):
-                        print(captured_response.keys())
-
-                        import json
-
-                        with open(
-                            "blinkit_response.json",
-                            "w",
-                            encoding="utf-8"
-                        ) as f:
-                            json.dump(
-                                captured_response,
-                                f,
-                                indent=2
-                            )
-
-                        print(
-                            "JSON SAVED -> blinkit_response.json"
-                        )
+                    print(
+                        f"Captured responses: "
+                        f"{len(captured_responses)}"
+                    )
                 except Exception as e:
                     print("JSON ERROR:", e)
 
@@ -113,7 +97,7 @@ class BlinkitBrowserClient:
             "\nSTARTING AUTO SCROLL"
         )
 
-        for i in range(20):
+        for i in range(17):
 
             await page.mouse.wheel(
                 0,
