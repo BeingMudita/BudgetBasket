@@ -339,10 +339,3 @@ uvicorn app.main:app --reload
 BudgetBasket aims to become a unified quick-commerce search engine that helps users save money by instantly comparing grocery prices across all major delivery platforms.
 ```
 
-This README is now properly formatted with markdown syntax, including:
-- Headers of appropriate levels
-- Code blocks with language specifications
-- Lists (ordered and unordered)
-- Status emojis (✅, 🟡, ⚪)
-- Proper indentation for nested structures
-- Clear section organization
