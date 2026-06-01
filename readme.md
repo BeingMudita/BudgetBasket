@@ -1,6 +1,3 @@
-Here's the converted content formatted as a clean, professional `README.md` file:
-
-```markdown
 # BudgetBasket
 
 A Quick Commerce Product Comparison Platform that allows users to search products across multiple grocery delivery platforms (Blinkit, Zepto, Instamart, BigBasket, etc.) and compare prices, availability, and savings in one place.
