@@ -39,3 +39,4 @@ async def search_products(
             total=total,
         ),
     }
+

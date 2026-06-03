@@ -17,3 +17,13 @@ async def blinkit_search(
     service = BlinkitService()
 
     return await service.search_products(query)
+
+@router.get("/zepto/search")
+async def zepto_search(
+    query: str,
+):
+    service = ZeptoService()
+
+    return await service.search_products(
+        query
+    )
