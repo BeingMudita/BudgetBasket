@@ -1,5 +1,6 @@
 from app.browser.browser_manager import BrowserManager
 
+import json
 
 class ZeptoBrowserClient:
     def __init__(self):
@@ -27,15 +28,23 @@ class ZeptoBrowserClient:
                 in response.url
                 and response.status == 200
             ):
-                print("\n====================")
-                print("ZEPTO RESPONSE FOUND")
-                print("====================")
-                print(response.url)
 
                 try:
                     json_data = await response.json()
 
                     captured_response = json_data
+
+                    with open(
+                        "zepto_response.json",
+                        "w",
+                        encoding="utf-8"
+                    ) as f:
+                        json.dump(
+                            json_data,
+                            f,
+                            indent=2,
+                            ensure_ascii=False,
+                        )
 
                     print(
                         "TOP LEVEL KEYS:",
@@ -82,7 +91,8 @@ class ZeptoBrowserClient:
 
         await page.goto(
             "https://www.zepto.com/search",
-            wait_until="networkidle",
+            wait_until="load",
+            timeout=60000,
         )
 
         print("PAGE LOADED")
@@ -124,10 +134,12 @@ class ZeptoBrowserClient:
                 if placeholder:
 
                     if (
-                        "search"
+                        placeholder
+                        and "products"
                         in placeholder.lower()
                     ):
                         search_input = inp
+                        break
 
             except Exception:
                 pass
@@ -148,10 +160,12 @@ class ZeptoBrowserClient:
 
         await search_input.click()
 
-        await search_input.fill("")
-
-        await search_input.press_sequentially(
+        await search_input.fill(
             query
+        )
+
+        await page.keyboard.press(
+            "Enter"
         )
 
         await page.wait_for_timeout(

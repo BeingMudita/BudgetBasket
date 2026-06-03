@@ -3,6 +3,9 @@ from fastapi import APIRouter
 from app.integrations.blinkit.service import (
     BlinkitService,
 )
+from app.integrations.zepto.service import (
+    ZeptoService,
+)
 
 router = APIRouter(
     prefix="/api/v1/integrations",

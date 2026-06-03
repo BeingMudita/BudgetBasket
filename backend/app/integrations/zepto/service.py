@@ -8,38 +8,13 @@ from app.integrations.zepto.parser import (
 
 
 class ZeptoService:
-
     def __init__(self):
-        self.client = (
-            ZeptoBrowserClient()
-        )
+        self.client = ZeptoBrowserClient()
 
     async def search_products(
         self,
         query: str,
     ):
-
-        response = (
-            await self.client
-            .search_products(query)
+        return await self.client.search_products(
+            query=query
         )
-
-        if not response:
-
-            return {
-                "success": False,
-                "results": [],
-            }
-
-        products = (
-            ZeptoParser.parse_products(
-                response
-            )
-        )
-
-        return {
-            "success": True,
-            "platform": "zepto",
-            "query": query,
-            "results": products,
-        }
