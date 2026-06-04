@@ -27,13 +27,47 @@ class ZeptoBrowserClient:
             if (
                 "user-search-service/api/v3/search"
                 in response.url
+                and "/filters" not in response.url
                 and response.status == 200
             ):
                 try:
                     json_data = await response.json()
 
-                    captured_response = json_data
+                    if "layout" in json_data:
+                        captured_response = json_data
 
+                        with open(
+                            "zepto_response.json",
+                            "w",
+                            encoding="utf-8"
+                        ) as f:
+                            json.dump(
+                                json_data,
+                                f,
+                                indent=2,
+                                ensure_ascii=False,
+                            )
+
+                    import json
+
+                    with open(
+                        "zepto_response.json",
+                        "w",
+                        encoding="utf-8"
+                    ) as f:
+                        json.dump(
+                            json_data,
+                            f,
+                            indent=2,
+                            ensure_ascii=False,
+                        )
+
+                    print(
+                        "PRODUCT COUNT:",
+                        json_data.get(
+                            "totalProductCount"
+                        )
+                    )
                     print(
                         "\n===================="
                     )
@@ -123,7 +157,20 @@ class ZeptoBrowserClient:
         await page.wait_for_timeout(
             5000
         )
+        inputs = await page.locator("input").all()
 
+        print(f"TOTAL INPUTS: {len(inputs)}")
+
+        for i, inp in enumerate(inputs):
+            try:
+                placeholder = await inp.get_attribute(
+                    "placeholder"
+                )
+
+                print(i, placeholder)
+
+            except Exception:
+                pass
         # -----------------------------
         # PRODUCT SEARCH BOX
         # -----------------------------
