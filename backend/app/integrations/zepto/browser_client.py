@@ -2,6 +2,7 @@ from app.browser.browser_manager import BrowserManager
 
 import json
 
+
 class ZeptoBrowserClient:
     def __init__(self):
         self.browser_manager = BrowserManager()
@@ -16,9 +17,9 @@ class ZeptoBrowserClient:
 
         captured_response = None
 
-        # ---------------------------------
+        # -----------------------------
         # CAPTURE SEARCH API RESPONSE
-        # ---------------------------------
+        # -----------------------------
 
         async def handle_response(response):
             nonlocal captured_response
@@ -28,16 +29,30 @@ class ZeptoBrowserClient:
                 in response.url
                 and response.status == 200
             ):
-
                 try:
                     json_data = await response.json()
 
                     captured_response = json_data
 
+                    print(
+                        "\n===================="
+                    )
+                    print(
+                        "ZEPTO RESPONSE FOUND"
+                    )
+                    print(
+                        "===================="
+                    )
+
+                    print(
+                        "TOP LEVEL KEYS:",
+                        json_data.keys()
+                    )
+
                     with open(
                         "zepto_response.json",
                         "w",
-                        encoding="utf-8"
+                        encoding="utf-8",
                     ) as f:
                         json.dump(
                             json_data,
@@ -45,11 +60,6 @@ class ZeptoBrowserClient:
                             indent=2,
                             ensure_ascii=False,
                         )
-
-                    print(
-                        "TOP LEVEL KEYS:",
-                        json_data.keys()
-                    )
 
                 except Exception as e:
                     print(
@@ -62,9 +72,9 @@ class ZeptoBrowserClient:
             handle_response,
         )
 
-        # ---------------------------------
+        # -----------------------------
         # DEBUG REQUESTS
-        # ---------------------------------
+        # -----------------------------
 
         async def handle_request(request):
 
@@ -72,9 +82,16 @@ class ZeptoBrowserClient:
                 "user-search-service/api/v3/search"
                 in request.url
             ):
-                print("\n====================")
-                print("SEARCH REQUEST")
-                print("====================")
+                print(
+                    "\n===================="
+                )
+                print(
+                    "SEARCH REQUEST"
+                )
+                print(
+                    "===================="
+                )
+
                 print(request.method)
                 print(request.url)
 
@@ -83,98 +100,51 @@ class ZeptoBrowserClient:
             handle_request,
         )
 
-        # ---------------------------------
-        # OPEN SEARCH PAGE
-        # ---------------------------------
+        # -----------------------------
+        # OPEN ZEPTO
+        # -----------------------------
 
-        print("\nOPENING ZEPTO")
+        print(
+            "\nOPENING ZEPTO"
+        )
 
         await page.goto(
             "https://www.zepto.com/search",
-            wait_until="load",
+            wait_until="domcontentloaded",
             timeout=60000,
         )
 
-        print("PAGE LOADED")
+        print(
+            "PAGE LOADED"
+        )
+
         print(page.url)
 
         await page.wait_for_timeout(
             5000
         )
 
-        # ---------------------------------
-        # FIND SEARCH INPUT
-        # ---------------------------------
+        # -----------------------------
+        # PRODUCT SEARCH BOX
+        # -----------------------------
 
-        inputs = await page.locator(
-            "input"
-        ).all()
-
-        print(
-            f"TOTAL INPUTS: {len(inputs)}"
-        )
-
-        search_input = None
-
-        for i, inp in enumerate(inputs):
-
-            try:
-
-                placeholder = (
-                    await inp.get_attribute(
-                        "placeholder"
-                    )
-                )
-
-                print(
-                    i,
-                    placeholder,
-                )
-
-                if placeholder:
-
-                    if (
-                        placeholder
-                        and "products"
-                        in placeholder.lower()
-                    ):
-                        search_input = inp
-                        break
-
-            except Exception:
-                pass
-
-        if not search_input:
-
-            raise Exception(
-                "Search input not found"
+        search_input = (
+            page.get_by_placeholder(
+                "Search for over 5000 products"
             )
-
-        # ---------------------------------
-        # SEARCH
-        # ---------------------------------
-
-        print(
-            f"\nSEARCHING: {query}"
         )
 
         await search_input.click()
 
-        await search_input.fill(
-            query
-        )
+        await search_input.fill(query)
 
         await page.keyboard.press(
             "Enter"
         )
 
-        await page.wait_for_timeout(
-            5000
-        )
-
-        # ---------------------------------
-        # WAIT FOR API
-        # ---------------------------------
+        # -----------------------------
+        # WAIT FOR RESPONSE
+        # -----------------------------
 
         for _ in range(20):
 
@@ -185,9 +155,9 @@ class ZeptoBrowserClient:
                 1000
             )
 
-        # ---------------------------------
-        # SCREENSHOT
-        # ---------------------------------
+        # -----------------------------
+        # DEBUG SCREENSHOT
+        # -----------------------------
 
         await page.screenshot(
             path="zepto_search_result.png",
@@ -197,10 +167,6 @@ class ZeptoBrowserClient:
         print(
             "\nSCREENSHOT SAVED"
         )
-
-        # ---------------------------------
-        # OPTIONAL
-        # ---------------------------------
 
         # await self.browser_manager.stop()
 

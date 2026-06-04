@@ -4,18 +4,19 @@ from app.integrations.base.schemas import (
 
 
 class ZeptoParser:
-
     @staticmethod
-    def parse_products(response):
+    def parse_products(
+        response: dict,
+    ) -> list[IntegrationProduct]:
 
-        products = []
+        parsed_products = []
 
-        layout = response.get(
+        layouts = response.get(
             "layout",
-            []
+            [],
         )
 
-        for widget in layout:
+        for widget in layouts:
 
             if (
                 widget.get("widgetId")
@@ -24,7 +25,8 @@ class ZeptoParser:
                 continue
 
             items = (
-                widget.get("data", {})
+                widget
+                .get("data", {})
                 .get("resolver", {})
                 .get("data", {})
                 .get("items", [])
@@ -32,69 +34,77 @@ class ZeptoParser:
 
             for item in items:
 
-                try:
-
-                    product_response = item[
-                        "productResponse"
-                    ]
-
-                    product = (
-                        product_response[
-                            "product"
-                        ]
+                product_response = (
+                    item.get(
+                        "productResponse",
+                        {}
                     )
+                )
 
-                    variant = (
-                        product_response[
-                            "productVariant"
-                        ]
+                product = (
+                    product_response.get(
+                        "product",
+                        {}
                     )
+                )
 
-                    image_url = None
+                variant = (
+                    product_response.get(
+                        "productVariant",
+                        {}
+                    )
+                )
 
-                    if variant.get("images"):
+                image_url = None
 
-                        image_url = (
-                            variant["images"][0]
-                            .get("path")
-                        )
+                images = variant.get(
+                    "images",
+                    []
+                )
 
-                    products.append(
-                        IntegrationProduct(
-                            platform="zepto",
-                            platform_product_id=str(
-                                product_response.get(
-                                    "id"
-                                )
-                            ),
-                            name=product.get(
-                                "name"
-                            ),
-                            image_url=image_url,
-                            selling_price=(
-                                product_response.get(
-                                    "sellingPrice",
-                                    0
-                                )
-                                / 100
-                            ),
-                            mrp=(
-                                product_response.get(
-                                    "mrp",
-                                    0
-                                )
-                                / 100
-                            ),
-                            in_stock=not (
-                                product_response.get(
-                                    "outOfStock",
-                                    False
-                                )
-                            ),
+                if images:
+
+                    image_url = (
+                        "https://cdn.zeptonow.com/"
+                        + images[0].get(
+                            "path",
+                            ""
                         )
                     )
 
-                except Exception:
-                    pass
+                parsed_products.append(
+                    IntegrationProduct(
+                        platform="zepto",
+                        platform_product_id=str(
+                            product_response.get(
+                                "id"
+                            )
+                        ),
+                        name=product.get(
+                            "name"
+                        ),
+                        image_url=image_url,
+                        selling_price=(
+                            product_response.get(
+                                "sellingPrice",
+                                0,
+                            )
+                            / 100
+                        ),
+                        mrp=(
+                            product_response.get(
+                                "mrp",
+                                0,
+                            )
+                            / 100
+                        ),
+                        in_stock=not (
+                            product_response.get(
+                                "outOfStock",
+                                False,
+                            )
+                        ),
+                    )
+                )
 
-        return products
+        return parsed_products
