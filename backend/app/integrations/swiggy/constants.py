@@ -1,11 +1,11 @@
-PLATFORM = "swiggy"
-
-SEARCH_ENDPOINT = (
+SWIGGY_SEARCH_URL = (
     "https://www.swiggy.com/api/instamart/search/v2"
 )
 
-IMAGE_BASE_URL = (
-    "https://media-assets.swiggy.com/swiggy/image/upload/"
-)
+STORE_ID = "1399700"
+PRIMARY_STORE_ID = "1399700"
+LAYOUT_ID = "4987"
 
-PAGE_SIZE = 32
+DEVICE_ID = "2b1eb6b3-52fb-4fff-bc15-3d1b93f2d526"
+
+BUILD_VERSION = "2.347.0"
